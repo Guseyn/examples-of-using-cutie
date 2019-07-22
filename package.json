@@ -1,0 +1,22 @@
+{
+  "name": "examples-of-using-cutie",
+  "version": "1.0.0",
+  "description": "For video tutorial where I explain features of cutie lib and what kind of thing you can do with it in general (video is in progress)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Guseyn/examples-of-using-cutie.git"
+  },
+  "author": "guseyn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Guseyn/examples-of-using-cutie/issues"
+  },
+  "homepage": "https://github.com/Guseyn/examples-of-using-cutie#readme",
+  "dependencies": {
+    "@cuties/fs": "^1.2.4"
+  }
+}

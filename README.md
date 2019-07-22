@@ -7,3 +7,7 @@ Plan for the video:
 2. Explaing ideas of declarative programming (abstract example)
 3. Idea of async objects as a solution for the callback hell problem (on fs module)
 4. Examples (ParsedJSON, cutie-assert, cutie-rest, simple-oauth-app)
+
+2nd video:
+
+Features of the `AsyncObject`

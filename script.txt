@@ -2,10 +2,23 @@ Script:
 
 Hi, it’s Guseyn. In this video I’ll demonstrate my solution for callback hell problem, which I’ve been using for last year. It’s based on ideas of declarative programming and pure object-oriented paradigm, which I really like. I’ll show why I don’t use Promises and async/await abstractions for resolving this particular problem, and why I think that declarative constructions is the only good way to write code in the asynchronous environment for big and complex applications. Also I’ll introduce you my library which provides such declarative abstractions.
 
-Let’s take a look at this silly but quite representative  code where we make a sequence of async calls. Here we try to read some content from first file and write it into another file. Most people think that the main problem of using callback is that our code becomes nested, but in my opinion, the main problem of callbacks is that we expose results and behaviour outside of our async calls. Callbacks are kinda proxies which we use for data manipulation and error handling, also in callbacks we invokes other logic which can use other async calls, so we call call-backs inside of other callbacks, and as a result we get spaghetti code. So, basically we share this result here in callback, and here we use it as an argument in another async call. And the value of this result can mutate, so it  becomes more problematic to control data flow in our application.
-Also you can see here duplication of code where check if error is null or not.
+========================================================
 
-So, it’s clear that you cannot write big application using callbacks. Of course you cat structure yours code adding more grouping functions, but I don’t think that it’s a good approach, because eventually you will duplicate a lot of code, and  is not great.
+Let’s take a look at this silly but quite representative code where we make a sequence of async calls. Here we try to read some content from first file and write it into another one.
+
+========================================================
+
+Most people think that the main problem of using callbacks is that our code becomes more nested as you can see. But actually in my opinion, the main problem of using them is that we expose results and behaviour outside of our async calls here and here. Callbacks are kinda proxies which we use for data manipulation and error handling, also in callbacks we invoke other logic which can use other async calls, so we call callbacks inside of other callbacks, and as a result we get this spaghetti code. 
+
+========================================================
+
+Also the part of the problem is that we share this result here in the callback of the first async call, and we use it as an argument for the second async call. And this result can mutate, so it  becomes even more problematic to control data flow in our application. Also you can see here duplication of code where we check if error is null or not.
+
+========================================================
+
+So, it’s clear that it's extremly difficult to write big programms using callbacks. Of course you can structure your code somehow adding functions which group different combination of async calls, but the code will still look confusing to read and it will still have the same problems which I described.
+
+========================================================
 
 Now we can look at promises abstraction which was introduced to solve the callback hell problem(maybe). So, what we do here: we just wrap our async functions with Promise objects where we put here result callback function and reject function which activates when an error occurs. But in my opinion it’s not better than just structuring you code by adding more functions, because as u can see, we still expose our data and error handling outside of async calls. Yes, of course now you can use chain of async calls instead of nested callback structure, but still it’s not great idea because it’s really difficult to structure code in such way, you should pay more and more attention to the data flow in your application, you still share it and value of it can be changed. Anyway, the idea of Promises looks ugly to me. I expected more than this stupid solution, but we have what we have.
 

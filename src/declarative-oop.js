@@ -5,3 +5,5 @@ new WrittenFile(
   './text2.txt',
   new ReadDataByPath('./text1.txt', 'utf8')
 ).call()
+
+

@@ -29,3 +29,10 @@ const handleError = async () => {
 
 handleError()
 copyContent('./text1.txt', './text2.txt')
+
+async () => {
+  const res1 = await fun1()
+  const res2 = await fun2() 
+  const res3 = await funt3()
+}
+

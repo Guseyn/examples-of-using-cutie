@@ -17,6 +17,10 @@
   },
   "homepage": "https://github.com/Guseyn/examples-of-using-cutie#readme",
   "dependencies": {
-    "@cuties/fs": "^1.2.4"
+    "@cuties/assert": "^1.2.2",
+    "@cuties/created": "^1.0.2",
+    "@cuties/fs": "^1.2.4",
+    "@cuties/json": "^1.1.1",
+    "@cuties/rest": "^1.2.12"
   }
 }
